@@ -19,7 +19,7 @@ export class App implements OnInit {
 
   ngOnInit(): void {
     const startDate = new Date();
-    startDate.setFullYear(2017, 1, 12)
+    startDate.setFullYear(2017, 11, 2)
     this.startDate.set(startDate);
 
     this.updateTime();
