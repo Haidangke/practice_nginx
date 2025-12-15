@@ -1,3 +1,5 @@
+name: Deploy to VPS
+
 on: 
   push:
     branches: [main]
@@ -7,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy VPS
-      - uses: appleboy/ssh-action@v0.1.6
+        uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
