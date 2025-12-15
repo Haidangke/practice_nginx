@@ -10,7 +10,7 @@ import { interval } from 'rxjs';
   styleUrl: './app.css'
 })
 export class App implements OnInit {
-  startDate = signal(new Date());
+  startDate = signal(new Date(2017, 11, 2));
   now = signal(new Date());
 
   space = signal(0)
@@ -18,10 +18,6 @@ export class App implements OnInit {
   selectedUnit = signal('seconds');
 
   ngOnInit(): void {
-    const startDate = new Date();
-    startDate.setFullYear(2017, 11, 2)
-    this.startDate.set(startDate);
-
     this.updateTime();
 
     interval(1000).subscribe(() => {
